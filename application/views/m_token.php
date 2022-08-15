@@ -19,7 +19,7 @@
               <tr><td>Nama Ujian</td><td><?php echo $du['nama_ujian']; ?></td></tr>
               <tr><td>Jml Soal</td><td><?php echo $du['jml_soal']; ?></td></tr>
               <tr><td>Waktu</td><td><?php echo $du['waktu']; ?> menit</td></tr>
-              <tr><td>Token</td><td><input type="text" name="token" id="token" required="true" class="form-control col-md-3" value="ZDSCU"></td></tr>
+              <tr><td>Token</td><td><input type="text" name="token" id="token" required="true" class="form-control col-md-3" value="JIHYE"></td></tr>
             </table>
           </div>
         </div>

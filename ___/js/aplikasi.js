@@ -46,6 +46,7 @@ $(document).ready(function() {
 		if (url2 == "det") {
 			pagination("datatabel", base_url+"adm/m_ujian/data_det/"+url3, []);
 		} else {
+			console.log( "m_ujian" )
 			pagination("datatabel", base_url+"adm/m_ujian/data", []);	
 		}
 	} else if (url == "ikut_ujian") {

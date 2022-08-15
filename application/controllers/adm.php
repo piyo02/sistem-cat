@@ -125,7 +125,6 @@ class Adm extends CI_Controller {
 			exit;
 		} else if ($uri3 == "simpan_matkul") {
 			$ket 	= "";
-			//echo var_dump($p);
 			$ambil_matkul = $this->db->query("SELECT id FROM m_mapel ORDER BY id ASC")->result();
 			if (!empty($ambil_matkul)) {
 				foreach ($ambil_matkul as $a) {
@@ -314,7 +313,6 @@ class Adm extends CI_Controller {
 			exit;
 		} else if ($uri3 == "simpan_matkul") {
 			$ket 	= "";
-			//echo var_dump($p);
 			$ambil_matkul = $this->db->query("SELECT id FROM m_mapel ORDER BY id ASC")->result();
 			if (!empty($ambil_matkul)) {
 				foreach ($ambil_matkul as $a) {
@@ -969,6 +967,7 @@ class Adm extends CI_Controller {
 
 					$query = "INSERT INTO mapel_tes VALUES (
 							  null, $mapel_id, $tes_id, $jml_soal, $waktu)";
+							//   var_dump( $query ); die;
 					$this->db->query($query);
 				}
 				$pesan = "Berhasil Membuat Ujian";
@@ -1063,7 +1062,6 @@ class Adm extends CI_Controller {
 			} else {
 				$a['d'] = $this->db->query("SELECT * FROM tr_guru_tes WHERE id = '$uri4'")->row_array();
 				$mapels = $this->db->query("SELECT * FROM mapel_tes WHERE guru_tes_id = $uri4")->result_array();
-
 				$i = 0;
 				foreach ($mapels as $mapel) {
 					$a['d']['arr_mapel'][$i] = $mapel;
@@ -1397,7 +1395,8 @@ class Adm extends CI_Controller {
 
 			if (!empty($a['du']) || !empty($a['dp'])) {
 				$tgl_selesai = $a['du']['tgl_mulai'];
-			    //$tgl_selesai2 = strtotime($tgl_selesai);
+				// var_dump( $tgl_selesai ); die;
+				//$tgl_selesai2 = strtotime($tgl_selesai);
 			    //$tgl_baru = date('F j, Y H:i:s', $tgl_selesai);
 
 			    //$tgl_terlambat = strtotime("+".$a['du']['terlambat']." minutes", $tgl_selesai2);	
